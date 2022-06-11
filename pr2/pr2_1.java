@@ -1,5 +1,3 @@
-package praktika2;
-
 import java.util.Scanner;
 
 public class pr2_1 {
