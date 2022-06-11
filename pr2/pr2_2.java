@@ -1,5 +1,3 @@
-package praktika2;
-
 public class pr2_2 {
     public static void main(String[] args) {
         int r=10, j=0;
