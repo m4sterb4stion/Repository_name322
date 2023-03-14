@@ -36,15 +36,7 @@ public class Abonents {
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Abonents abonents = (Abonents) o;
-        return Objects.equals(id, abonents.id);
-    }
-
-
+    
     @Override
     public String toString() {
         return "Абонент{" +
