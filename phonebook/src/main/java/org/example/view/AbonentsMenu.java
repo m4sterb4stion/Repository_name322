@@ -49,7 +49,7 @@ public class AbonentsMenu {
         Abonents abonents= new Abonents(null, name, lastName, phoneNumber);
         abonentsService.save(abonents);
     }
-    void drawListAbonents() throws SQLException {
+    private void drawListAbonents() throws SQLException {
         System.out.println();
         System.out.println("---Список абонентов---");
         abonentsService.getAll().forEach(System.out::println);
