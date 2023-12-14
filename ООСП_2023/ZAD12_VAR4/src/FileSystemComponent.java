@@ -1,3 +1,0 @@
-interface FileSystemComponent {
-    void display();
-}
