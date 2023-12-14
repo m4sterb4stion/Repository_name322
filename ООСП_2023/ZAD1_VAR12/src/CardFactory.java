@@ -1,0 +1,3 @@
+interface CardFactory {
+    Card createCard();
+}

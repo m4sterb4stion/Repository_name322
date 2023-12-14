@@ -1,0 +1,3 @@
+interface Artillery {
+    void attack();
+}
