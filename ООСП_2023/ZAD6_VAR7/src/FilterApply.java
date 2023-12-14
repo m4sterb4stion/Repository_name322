@@ -1,3 +1,0 @@
-interface FilterApply {
-    void apply();
-}
