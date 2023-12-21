@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <title>Текущая дата и время</title>
+    <style>
+        body {
+            color: black;
+        }
+
+        #dateAndTime {
+            color: black;
+        }
+    </style>
+    <script>
+        function showTime() {
+            var weekdays = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+            var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+
+            var now = new Date();
+
+            var formattedDate = weekdays[now.getDay()] + ', ' +
+                                now.getDate() + ' ' +
+                                months[now.getMonth()] + ' ' +
+                                now.getFullYear() + ' года ' +
+                                now.getHours() + ' час. ' +
+                                now.getMinutes() + ' мин. ' +
+                                now.getSeconds() + ' сек';
+
+            document.getElementById('dateAndTime').innerHTML = formattedDate;
+        }
+
+        window.onload = function () {
+            showTime();
+        };
+    </script>
+</head>
+<body>
+    <div id="dateAndTime"></div>
+</body>
+</html>

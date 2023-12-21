@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Новая страница 1</title>
+</head>
+
+<body>
+
+  <script>
+	function displayGreeting() {
+	  alert('Добро пожаловать на мою страницу!');
+	}
+	
+	function askForName() {
+	  var name = prompt('Введите ваше имя:');
+	  document.write('<h1>Привет, ' + name + '!</h1>');
+	}
+	
+	function askForNumber() {
+	  var number = prompt('Введите число:');
+	  if (number !== null && number !== '') {
+	    alert('Введенное число: ' + number);
+	  } else {
+	    alert('Число не введено');
+	  }
+	}
+	displayGreeting();
+	askForName();
+	askForNumber();
+  </script>
+
+</body>
+
+</html>

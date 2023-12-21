@@ -1,0 +1,24 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Новая страница 1</title>
+</head>
+
+<body>
+
+  <script>
+	function calculateTriangleArea() {
+	  var baseLength = parseFloat(prompt('Введите длину основания треугольника:'));
+	  var height = parseFloat(prompt('Введите высоту треугольника:'));
+	  var area = 0.5 * baseLength * height;
+	  document.write('<h2>Площадь треугольника:</h2>');
+	  document.write('<p>Формула: S = 0.5 * a * h</p>');
+	  document.write('<p>Результат: S = ' + area.toFixed(2) + '</p>');
+	}
+	calculateTriangleArea();
+  </script>
+
+</body>
+
+</html>

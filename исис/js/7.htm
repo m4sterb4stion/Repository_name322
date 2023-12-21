@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  color: blue;
+}
+
+.weekend {
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<table id="calendar">
+  <caption>Январь 2005</caption>
+  <thead>
+    <tr>
+      <th>Пн</th>
+      <th>Вт</th>
+      <th>Ср</th>
+      <th>Чт</th>
+      <th>Пт</th>
+      <th class="weekend">Сб</th>
+      <th class="weekend">Вс</th>
+    </tr>
+  </thead>
+  <tbody id="calendar-body"></tbody>
+</table>
+
+<script>
+function getDayOfWeek(year, month, day) {
+  var date = new Date(year, month - 1, day);
+  var daysOfWeek = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+  return daysOfWeek[date.getDay()];
+}
+
+function showCalendar(year, month) {
+  var calendarBody = document.getElementById('calendar-body');
+  calendarBody.innerHTML = '';
+
+  var date = new Date(year, month - 1, 1);
+  var lastDay = new Date(year, month, 0).getDate();
+  var dayOfWeek = date.getDay();
+
+  var row = calendarBody.insertRow();
+  var dayCell;
+
+  // Заполняем пустые ячейки до первого дня месяца
+  for (var i = 0; i < dayOfWeek; i++) {
+    dayCell = row.insertCell();
+  }
+
+  // Заполняем ячейки с датами
+  for (var day = 1; day <= lastDay; day++) {
+    dayOfWeek = (dayOfWeek + 1) % 7;
+    dayCell = row.insertCell();
+    dayCell.innerHTML = day;
+
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+      dayCell.classList.add('weekend');
+    }
+
+    if (dayOfWeek === 0) {
+      row = calendarBody.insertRow();
+    }
+  }
+}
+
+showCalendar(2005, 1);
+</script>
+
+</body>
+</html>

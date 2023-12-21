@@ -1,0 +1,25 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Новая страница 1</title>
+</head>
+
+<body>
+
+  <script>
+	function displayGreetingAndTime() {
+	  var name = prompt('Введите ваше имя:');
+	  var formattedName = name.toUpperCase();
+	  document.write('<h1 style="color: green;">Привет, ' + formattedName + '!</h1>');
+	  var currentDate = new Date();
+	  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+	  var formattedDate = currentDate.toLocaleDateString('ru-RU', options);
+	  document.write('<p>Сегодня ' + formattedDate + '</p>');
+	}
+	displayGreetingAndTime();
+  </script>
+
+</body>
+
+</html>
