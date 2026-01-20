@@ -1,0 +1,6 @@
+name_lastname = input("Ваши фамилия, имя?")
+age = input("Сколько Вам лет?")
+living_place = input("Где вы живете?")
+print("Ваши фамилия, имя", name_lastname)
+print("Ваш возраст", age)
+print("Вы живете в", living_place)
